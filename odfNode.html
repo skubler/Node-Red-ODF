@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    RED.nodes.registerType('odfNode',{
+        category: 'IoT standard',
+        color: '#00AFF0',
+        defaults: {
+            name: {value:""},
+            //parsing: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "feed.png",
+        label: function() {
+            return this.name||"odfNode";
+        },
+        /*oneditprepare: function() {
+            var oper = $("#node-input-operations").val();
+            //var oper_readTypes = $("#node-input-readTypes").val();
+            if (oper == undefined) {
+                $(".node-input-readTypes").hide();
+                //$("#node-input-readTypes").val("false");
+                $(".node-input-ttl").hide();
+                $(".node-input-interval").hide();
+                $(".node-input-callback").hide();
+                $(".node-input-lastvalues").hide();
+                $(".node-input-dates").hide();
+                $(".node-input-value").hide();
+                $(".node-input-reqID").hide();
+                $(".node-input-metadata").hide();
+            }
+        },
+        oneditsave: function() {
+            var type = $("#node-input-readTypes").val();
+            if (type == "subscriboooe") {
+                console.log("totoooo");
+            }
+        },*/
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+        //oneditprepare: oneditprepare
+    });
+</script>
+
+<script type="text/x-red" data-template-name="odfNode">
+<div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" data-i18n="Name">
+    </div>
+    <!--<div class="form-row">  
+        <label for="node-input-parsing"><i class="fa fa-envelope"></i> Interface</label>
+        <select type="text" id="node-input-parsing" placeholder="Toto">
+            <option value="Object">Object</option>
+            <option value="InfoItem">InfoItem</option>
+            <option value="Value">Value</option>
+            <option value="Message">Metadata</option>
+            <option value="Description">Description</option>
+        </select>
+    </div>-->
+</script>
+
+
+<script type="text/x-red" data-help-name="odfNode">
+    <p>A simple node that offf TO BE COMPLETED</p>
+</script>
